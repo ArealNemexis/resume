@@ -108,6 +108,18 @@
         };
         html2pdf().from(element).set(opt).save();
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const skills = document.querySelectorAll(".skills-inline span");
+        skills.forEach((skill, index) => {
+            if (index < skills.length - 1) { // não coloca depois do último
+                const separator = document.createElement("span");
+                separator.textContent = " - ";
+                separator.classList.add("separator");
+                skill.after(separator);
+            }
+        });
+    });
 </script>
 </body>
 </html>

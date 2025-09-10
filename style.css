@@ -84,7 +84,7 @@ ul {
 }
 
 .skills-inline span::after {
-    content: " -";
+    content: "";
 }
 
 .skills-inline span:last-child::after {
